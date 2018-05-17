@@ -8,6 +8,13 @@ var path = require('path');
  * JSON files.
  */
 module.exports = {
+    output: {
+        path: path.join(__dirname, 'dist'),
+        library: '[name]',
+        libraryTarget: 'commonjs2',
+        filename: '[name].js'
+    },
+    target: 'node',
     module: {
         loaders: [
             {
