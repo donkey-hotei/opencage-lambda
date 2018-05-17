@@ -8,19 +8,21 @@ var path = require('path');
  * JSON files.
  */
 module.exports = {
-    loaders: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-                preset: ['es2015'],
-                plugins: ['syntax-flow', 'transform-flow-strip-types']
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel',
+                query: {
+                    preset: ['es2015'],
+                    plugins: ['syntax-flow', 'transform-flow-strip-types']
+                }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json'
             }
-        },
-        {
-            test: /\.json$/,
-            loader: 'json'
-        }
-    ]
+        ]
+    }
 };
