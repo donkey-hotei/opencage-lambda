@@ -1,0 +1,23 @@
+{
+  "name": "geocodereverse",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for geocoding",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "exit 1"
+  },
+  "author": "Isaak Yansane",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "json-loader": "^0.5.7",
+    "webpack": "^4.8.3"
+  }
+}
