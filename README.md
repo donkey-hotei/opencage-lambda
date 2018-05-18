@@ -23,7 +23,7 @@ dist
 └── reverse.js
 ```
 
-You can then copy-and-paste either of the builds there to inside of AWS Lambda.
+You can then copy-and-paste either of the builds there inside of AWS Lambda.
 
 Enjoy!
 
