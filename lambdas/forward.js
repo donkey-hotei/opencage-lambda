@@ -1,3 +1,4 @@
+import Geocoder from '../lib/geocoder'
 
 type forwardParams = {
     address: string
