@@ -1,19 +1,17 @@
-import Geocoder from '../lib/geocoder'
 
-type reverseParams = {
-    lat: number,
-    lon: number
+type forwardParams = {
+    address: string
 }
 
 /*
  *  Entrypoint for AWS Lambda function
- * `params` is JSON payload sent by client
+ * `event` is JSON payload sent by client
  * `context` is an object that has methods which let
  *           Lambda know when the we're done.
  */
-export function reverse(params: reverseParams, context: any): void {
+export function forward(params: geocoderParams, context: any): void {
     Geocoder
-        .reverse([params.lat, params.lon])
+        .forward(params.address)
         .then((address) => {
             return context.succeed(address)
         })
