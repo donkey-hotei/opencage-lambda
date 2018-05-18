@@ -9,7 +9,7 @@ type forwardParams = {
  * `context` is an object that has methods which let
  *           Lambda know when the we're done.
  */
-export function forward(params: geocoderParams, context: any): void {
+export function forward(params: forwardParams, context: any): void {
     Geocoder
         .forward(params.address)
         .then((address) => {
